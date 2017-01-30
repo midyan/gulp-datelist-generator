@@ -9,4 +9,4 @@ Just run
 $ gulp generate-date-list --start START_YEAR --end END_YEAR
 ```
 
-It will create a datelist.txt file with all the dates inside.
+It will create a datelist_START_YEAR_END_YEAR.txt file with all the dates inside.

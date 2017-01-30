@@ -36,6 +36,6 @@ gulp.task('generate-date-list', () => {
     }
   }
 
-  fs.writeFileSync('datelist.txt', dates.join('\n'))
+  fs.writeFileSync('datelist_'+startYear+'_'+endYear+'.txt', dates.join('\n'))
 
 })
