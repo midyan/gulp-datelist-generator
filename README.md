@@ -6,6 +6,7 @@ It does assume that every month has 31 days because, lets be honest, it will mak
 
 Just run
 ```sh
+$ npm install
 $ gulp generate-date-list --start START_YEAR --end END_YEAR
 ```
 
