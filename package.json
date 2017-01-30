@@ -1,0 +1,14 @@
+{
+  "name": "datelist",
+  "version": "1.0.0",
+  "description": "datelist generator",
+  "main": "index.js",
+  "author": "Yan Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "capitalize": "^1.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "yargs": "^6.6.0"
+  }
+}
