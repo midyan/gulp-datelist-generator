@@ -7,6 +7,12 @@ var generateSequence = (start, end) => {
 
   var sequence = []
 
+  if( end < start ){
+    var temp = end
+    end = start
+    start = temp
+  }
+
   for (var i = start; i<=end; i++) {
     var index = i<10? 0 + i.toString() : i
     sequence.push(index)
@@ -17,10 +23,15 @@ var generateSequence = (start, end) => {
 
 gulp.task('generate-date-list', () => {
 
-  var dates = []
+  var startYear = parseInt(argv.start)
+  var endYear = parseInt(argv.end)
 
-  var startYear = argv.start
-  var endYear = argv.end
+  console.log(startYear)
+
+  if( typeof startYear !== 'number' || (startYear%1) !== 0 ) return console.log( new Error('End and Start years must be intergers!!') )
+  if( typeof endYear !== 'number' || (endYear%1) !== 0 ) return console.log( new Error('End and Start years must be intergers!!') )
+
+  var dates = []
 
   var days = generateSequence(1, 31)
   var months = generateSequence(1, 12)
@@ -35,6 +46,8 @@ gulp.task('generate-date-list', () => {
       }
     }
   }
+
+  console.log(dates.length + " dates were generated.\n")
 
   fs.writeFileSync('datelist_'+startYear+'_'+endYear+'.txt', dates.join('\n'))
 
