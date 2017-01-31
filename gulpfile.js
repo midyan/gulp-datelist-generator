@@ -42,7 +42,8 @@ gulp.task('generate-date-list', () => {
     }
   }
 
-  console.log(dates.length + ' dates were generated.\n')
+  console.log(dates.length + ' dates were generated.)
 
   fs.writeFileSync('datelist_' + startYear + '_' + endYear + '.txt', dates.join('\n'))
+  
 })
