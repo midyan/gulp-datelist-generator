@@ -1,6 +1,6 @@
 # gulp-datelist-generator
 Simples datelist generator that generates every possible date between two given years.<br>
-It does assume that every month has 31 days because, lets be honest, it will make no difference.
+Now it months have the correct number of days, including leap years
 
 #How to use it:
 
